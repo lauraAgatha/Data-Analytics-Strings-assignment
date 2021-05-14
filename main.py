@@ -26,7 +26,6 @@ name_short = player[0] + '. ' + player[player.find(" ") + 1:]
 chant = first_name + '! ' + first_name + '! ' + first_name + '! ' + first_name + '!'
 #chant =  (first_name + '! ') * len(first_name)
 
-#((player[:player.find(' ')] + '! ') * len(player[:player.find(' ')]))[:-1]
 good_chant = chant != ' '
 
 print (first_name)
