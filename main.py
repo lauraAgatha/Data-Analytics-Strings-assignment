@@ -6,24 +6,28 @@ __human_name__ = 'strings'
 scorerOne = "Ruud Gullit"
 scorerTwo = "Marco van Basten"
 
-goal_1 = 32
-goal_2 = 54
+goal_0 = 32
+goal_1 = 54
 
-scorers = scorerOne + str(goal_1) + ', ' + scorerTwo + str(goal_2)
+scorers = scorerOne + ' ' + str(goal_0) + ', ' + scorerTwo + ' ' + str(goal_1)
 print(scorers)
 
-report = scorerOne + f" scored in the {goal_1}nd minute \n" + scorerTwo + f" scored in the {goal_2}th minute"
+report = scorerOne + f" scored in the {goal_0}nd minute\n" + scorerTwo + f" scored in the {goal_1}th minute"
 print(report)
 
 player = "Hans van Breukelen"
-first_name = player[player.find("Hans"):4]
-last_name_len = player[player.find("van Breukelen"): len(player)]
-name_short = player[0] + '. ' + last_name_len
-chant =  first_name + '! ' + first_name + '! ' + first_name + '!'   #(first_name + '!') * 3
-if (chant[len(chant)-1] != " "):
-    good_chant = chant
+first_name = player.split(" ")[0]
+# first_name = player[player.find("Hans"):4]
 
+last_name_len = len(player[player.find(" ") + 1:])
 
+name_short = player[0] + '. ' + player[player.find(" ") + 1:]
+
+chant = first_name + '! ' + first_name + '! ' + first_name + '! ' + first_name + '!'
+#chant =  (first_name + '! ') * len(first_name)
+
+#((player[:player.find(' ')] + '! ') * len(player[:player.find(' ')]))[:-1]
+good_chant = chant != ' '
 
 print (first_name)
 print(last_name_len)
