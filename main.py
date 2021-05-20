@@ -12,21 +12,19 @@ goal_1 = 54
 scorers = scorerOne + ' ' + str(goal_0) + ', ' + scorerTwo + ' ' + str(goal_1)
 print(scorers)
 
-report = scorerOne + f" scored in the {goal_0}nd minute\n" + scorerTwo + f" scored in the {goal_1}th minute"
+report = f"{scorerOne} scored in the {goal_0}nd minute\n" + scorerTwo + f" scored in the {goal_1}th minute"
 print(report)
 
 player = "Hans van Breukelen"
-first_name = player.split(" ")[0]
-# first_name = player[player.find("Hans"):4]
+first_name = player[:player.find(" ")]
 
 last_name_len = len(player[player.find(" ") + 1:])
 
 name_short = player[0] + '. ' + player[player.find(" ") + 1:]
 
-chant = first_name + '! ' + first_name + '! ' + first_name + '! ' + first_name + '!'
-#chant =  (first_name + '! ') * len(first_name)
+chant =  (first_name + '! ') * (len(first_name)-1) + (first_name + '!') 
 
-good_chant = chant != ' '
+good_chant = chant[-1] != ' '
 
 print (first_name)
 print(last_name_len)
